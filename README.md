@@ -1,5 +1,6 @@
 # Javascript Course Day 5
 
+## Ajax + CORS
 ## WebSockets
 ## Tools - Translating, Minification, Uglyfing
 
