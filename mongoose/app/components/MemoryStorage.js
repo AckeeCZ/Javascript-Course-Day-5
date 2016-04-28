@@ -21,3 +21,31 @@ exports.listNotes = () => {
 
     return notes;
 };
+
+exports.listNotesCallback = (cb) => {
+
+    process.nextTick(() => {
+        cb(null, notes);
+    });
+};
+
+exports.listNotesPromise = () => {
+
+    return new Promise((resolve, reject) => {
+        exports.listNotesCallback((err, items) => {
+            if (err) {
+                return reject(err);
+            }
+            resolve(items);
+        });
+    });
+};
+
+exports.deleteNoteByNote = (note) => {
+
+    if (_.find(notes, {note: note})) {
+        notes.splice(_.findIndex(notes, {note: note}));
+        return true;
+    }
+    return false;
+};
