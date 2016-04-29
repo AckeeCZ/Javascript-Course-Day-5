@@ -1,0 +1,29 @@
+{
+  "name": "application-name",
+  "version": "0.0.1",
+  "scripts": {
+    "start": "node --max-old-space-size=256 app.js",
+    "ci-test": "istanbul cover _mocha test/setup.js test/** --  -R tap > test.tap; istanbul report clover; exit 0",
+    "ci-lint": "eslint -f checkstyle . > checkstyle-result.xml; exit 0",
+    "test": "_mocha test/setup.js test/**",
+    "lint": "eslint .; exit 0",
+    "cover": "istanbul cover _mocha test/**"
+  },
+  "devDependencies": {
+    "chai": "latest",
+    "eslint": "^1.10.3",
+    "eslint-config-defaults": "^9.0.0",
+    "expect": "^1.13.4",
+    "expect.js": "0.3.1",
+    "istanbul": "^0.4.2",
+    "mocha": "latest"
+  },
+  "dependencies": {
+    "chai-as-promised": "^5.3.0",
+    "express": "^4.13.4",
+    "lodash": "^4.11.1",
+    "request": "^2.72.0",
+    "sloc": "^0.1.10",
+    "winston": "^2.2.0"
+  }
+}

@@ -1,0 +1,15 @@
+//Testing
+https://mochajs.org/
+http://chaijs.com/
+
+//Elisnt
+http://noeticforce.com/best-javascript-style-guide-for-maintainable-code
+https://www.npmjs.com/package/eslint-config-defaults
+http://eslint.org/docs/user-guide/configuring
+
+//Istanbul
+https://github.com/gotwarlost/istanbul
+open
+//Clover
+//Sloc
+
